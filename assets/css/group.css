@@ -23,6 +23,12 @@ h1 {
     font-size: 1.6rem;
 }
 
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+}
+
 .user {
     display: inline-block;
     background-color: #15151a;

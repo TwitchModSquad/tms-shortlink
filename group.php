@@ -51,14 +51,14 @@ function processNumber($num) {
         <h1>TMS Group List</h1>
         <?php
             foreach ($group as $user) {
-                echo '<div class="user'.($user["start_time"] !== null ? ' live' : '').'">
+                echo '<a href="https://twitch.tv/'.str_to_lower($user["display_name"]).'"><div class="user'.($user["start_time"] !== null ? ' live' : '').'">
                     <img src="'.$user["profile_image_url"].'" alt="Profile picture for '.$user["display_name"].'" />
                     <h2>'.$user["display_name"].($user["affiliation"] === "partner" ? '&nbsp;<i class="fas fa-badge-check"></i>' : '').'</h2>
                     <ul>
                         <li><strong>Followers: '.processNumber($user["follower_count"]).'</strong></li>
                         <li><strong>View Count: '.processNumber($user["view_count"]).'</strong></li>
                     </ul>
-                </div>';
+                </div></a>';
             }
         ?>
     </div>
