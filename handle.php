@@ -27,6 +27,8 @@ if ($getShortlink->rowCount() > 0) {
         while ($user = $getGroup->fetch(PDO::FETCH_ASSOC)) {
             array_push($group, $user);
         }
+        
+        require("group.php");
     } else {
         header("Location: " . $sl["longlink"]);
         die('<a href="'.$sl["longlink"].'">Header failed. Click here.</a>');
