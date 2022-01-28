@@ -1,13 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Lato&display=swap');
 
 body {
     font-family: 'Lato', sans-serif;
     background-color: #0e0e10;
-    display: flex;
-    align-items: center;
-    vertical-align: middle;
+    color: white;
+    text-align: center;
+}
+
+.wrapper {
+    width: calc(100% - 2em);
+    max-width: 40em;
+    margin: 2em auto;
 }
 
 h1, h2 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 400;
+    margin: 0;
+}
+
+h1 {
+    font-size: 1.6rem;
+}
+
+.user {
+    display: inline-block;
+    background-color: #15151a;
+    margin: 1em;
+    padding: 1em;
+    border-radius: .4em;
+}
+
+.user img {
+    position: relative;
+    width: 6em;
+    height: 6em;
+    border-radius: 3em;
+    margin: 1em;
+}
+
+.user.live img::before {
+    position: absolute;
+    content: '';
+    background-color: rgb(58, 145, 58);
+    width: .5em;
+    height: .5em;
+    border-radius: .25em;
+    top: 25%;
+    right: 25%;
+    transform: translate(-50%, -50%);
+    box-shadow: .2em .2em .5em rgba(0,0,0,0.3);
+}
+
+.user h2 {
+    font-size: 1.1rem;
+    margin-bottom: .2em;
+}
+
+.fa-badge-check {
+    color: #9147ff;
+}
+
+.user ul {
+    font-size: .8rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
