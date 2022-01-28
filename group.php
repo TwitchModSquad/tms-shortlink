@@ -62,7 +62,7 @@ function processNumber($num) {
                         <li><strong>Followers:</strong> '.processNumber($user["follower_count"]).'</li>
                         <li><strong>View Count:</strong> '.processNumber($user["view_count"]).'</li>
                     </ul>
-                    '.($user["affiliation"] == "partner" || $user["affiliation"] == "affiliate" ? '<a href="https://twitch.tv/products/'.strtolower($user["display_name"]).'" target="__blank" class="button no-style">Subscribe</a>' : '').'
+                    '.($user["affiliation"] == "partner" || $user["affiliation"] == "affiliate" ? '<a href="https://twitch.tv/'.strtolower($user["display_name"]).'/subscribe" target="__blank" class="button no-style">Subscribe</a>' : '').'
                 </div>';
             }
         ?>
