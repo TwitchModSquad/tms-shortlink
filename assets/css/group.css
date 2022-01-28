@@ -66,6 +66,7 @@ a.button:hover {
     margin: 1em;
     padding: 1em;
     border-radius: .4em;
+    vertical-align: top;
     overflow: hidden;
 }
 
