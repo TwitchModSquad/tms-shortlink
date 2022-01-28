@@ -55,8 +55,8 @@ function processNumber($num) {
                     <img src="'.$user["profile_image_url"].'" alt="Profile picture for '.$user["display_name"].'" />
                     <h2>'.$user["display_name"].($user["affiliation"] === "partner" ? '&nbsp;<i class="fas fa-badge-check"></i>' : '').'</h2>
                     <ul>
-                        <li><strong>Followers: '.processNumber($user["follower_count"]).'</strong></li>
-                        <li><strong>View Count: '.processNumber($user["view_count"]).'</strong></li>
+                        <li><strong>Followers:</strong> '.processNumber($user["follower_count"]).'</li>
+                        <li><strong>View Count:</strong> '.processNumber($user["view_count"]).'</li>
                     </ul>
                 </div></a>';
             }
