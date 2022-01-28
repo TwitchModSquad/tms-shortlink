@@ -72,5 +72,7 @@ function processNumber($num) {
         </footer>
     </div>
     <script src="https://kit.fontawesome.com/107bb78db8.js" crossorigin="anonymous"> </script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/group.js"></script>
 </body>
 </html>
