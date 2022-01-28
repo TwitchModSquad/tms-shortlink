@@ -55,7 +55,7 @@ function processNumber($num) {
         <main>
         <?php
             foreach ($group as $user) {
-                echo '<a href="https://twitch.tv/'.strtolower($user["display_name"]).'" target="__blank" class="user-link"><div class="user'.($user["start_time"] !== null ? ' live' : '').'">
+                echo '<div class="user'.($user["start_time"] !== null ? ' live' : '').'" data-href="https://twitch.tv/'.strtolower($user["display_name"]).'">
                     <img src="'.$user["profile_image_url"].'" alt="Profile picture for '.$user["display_name"].'" />
                     <h2>'.$user["display_name"].($user["affiliation"] === "partner" ? '&nbsp;<i class="fas fa-badge-check"></i>' : '').'</h2>
                     <ul>
@@ -63,7 +63,7 @@ function processNumber($num) {
                         <li><strong>View Count:</strong> '.processNumber($user["view_count"]).'</li>
                     </ul>
                     <a href="https://twitch.tv/products/'.strtolower($creator["display_name"]).'" target="__blank" class="button no-style">Subscribe</a>
-                </div></a>';
+                </div>';
             }
         ?>
         </main>
