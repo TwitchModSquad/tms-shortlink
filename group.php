@@ -35,14 +35,16 @@ if (!isset($group)) {
     <link rel="stylesheet" href="assets/css/group.css">
 </head>
 <body>
-    <h1>TMS Group List</h1>
-    <?php
-        foreach ($group as $user) {
-            echo '<div class="user">
-                <img src="'.$user["profile_image_url"].'" alt="Profile picture for '.$user["display_name"].'" />
-                <h2>'.$user["display_name"].'</h2>
-            </div>';
-        }
-    ?>
+    <div class="wrapper">
+        <h1>TMS Group List</h1>
+        <?php
+            foreach ($group as $user) {
+                echo '<div class="user">
+                    <img src="'.$user["profile_image_url"].'" alt="Profile picture for '.$user["display_name"].'" />
+                    <h2>'.$user["display_name"].'</h2>
+                </div>';
+            }
+        ?>
+    </div>
 </body>
 </html>
