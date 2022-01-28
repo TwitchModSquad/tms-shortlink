@@ -5,10 +5,13 @@ $q = $_GET["q"];
 
 if (str_starts_with($q, "i/")) {
     header("Location: https://panel.twitchmodsquad.com/#/records/user//identity/" . substr($q, 2));
+    exit();
 } else if (str_starts_with($q, "t/")) {
     header("Location: https://panel.twitchmodsquad.com/#/records/user//twitch/" . substr($q, 2));
+    exit();
 } else if (str_starts_with($q, "d/")) {
     header("Location: https://panel.twitchmodsquad.com/#/records/user//discord/" . substr($q, 2));
+    exit();
 }
 
 $getShortlink = $con->prepare("select id, name, longlink, created_id from shortlink where shortlink = ? or id = ?;");
