@@ -68,6 +68,7 @@ a.button:hover {
     border-radius: .4em;
     vertical-align: top;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .user img {
