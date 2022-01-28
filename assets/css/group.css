@@ -39,6 +39,26 @@ a.user-link {
     color: #fff;
 }
 
+a.button {
+    display: inline-block;
+    text-decoration: none;
+    font-size: .8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #7536d3;
+    padding: .6em 1.2em;
+    border-radius: .3em;
+    box-shadow: .2em .2em .6em rgba(0,0,0,0.2);
+    margin-top: 1em;
+    color: #fff;
+    transition: 0.2s background-color;
+}
+
+a.button:hover {
+    background-color: #6625c8;
+    box-shadow: .2em .2em .6em rgba(0,0,0,0.1);
+}
+
 .user {
     position: relative;
     display: inline-block;
@@ -70,15 +90,17 @@ a.user-link {
 }
 
 .user.live::after {
+    content: 'LIVE';
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: bold;
+    font-size: .6rem;
     position: absolute;
-    content: '';
-    background-color: rgb(69 172 69);
-    width: 1em;
-    height: 1em;
-    border-radius:1em;
-    border: .15em solid rgb(63 163 63);
-    top: 7em;
-    right: 2em;
+    top: 3.25em;
+    left: 50%;
+    padding: .3em .6em;
+    background-color: rgb(181 44 44);
+    border-radius: 1em;
+    border: .15em solid rgb(186 61 61);
     transform: translate(-50%, -50%);
     box-shadow: .2em .2em .5em rgba(0,0,0,0.3);
 }

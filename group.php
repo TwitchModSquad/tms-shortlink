@@ -62,6 +62,7 @@ function processNumber($num) {
                         <li><strong>Followers:</strong> '.processNumber($user["follower_count"]).'</li>
                         <li><strong>View Count:</strong> '.processNumber($user["view_count"]).'</li>
                     </ul>
+                    <a href="https://twitch.tv/products/'.strtolower($creator["display_name"]).'" target="__blank" class="button no-style">Subscribe</a>
                 </div></a>';
             }
         ?>
