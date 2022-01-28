@@ -50,7 +50,7 @@ function processNumber($num) {
     <div class="wrapper">
         <header>
             <h1>TMS Group List</h1>
-            <small><?= 'Group short link created by <img src="'.$creator["profile_image_url"].'" class="small-avatar" /> ' . $creator["display_name"]; ?></small>
+            <small><?= 'Group short link created by <a href="https://twitch.tv/'.strtolower($creator["display_name"]).'"><img src="'.$creator["profile_image_url"].'" class="small-avatar" /> ' . $creator["display_name"]; ?></a></small>
         </header>
         <main>
         <?php
