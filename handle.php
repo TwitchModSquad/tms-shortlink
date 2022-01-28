@@ -20,7 +20,7 @@ if ($getShortlink->rowCount() > 0) {
     $sl = $getShortlink->fetch(PDO::FETCH_ASSOC);
 
     if ($sl["longlink"] == null) {
-        $getGroup = $con->prepare("select tu.* from shortlink__group as slg join twitch__user as tu on tu.id = slg.user_id where shortlink_id = ? order by tu.display_name asc;");
+        $getGroup = $con->prepare("select tu.*, live.start_time from shortlink__group as slg join twitch__user as tu on tu.id = slg.user_id left join live on live.identity_id = tu.identity_id and live.end_time is null where shortlink_id = ? order by tu.display_name asc;");
         $getGroup->execute(array($sl["id"]));
 
         $group = array();
