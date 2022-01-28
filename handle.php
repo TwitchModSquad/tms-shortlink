@@ -11,10 +11,11 @@ if (str_starts_with($q, "i/")) {
     header("Location: https://panel.twitchmodsquad.com/#/records/user//discord/" . substr($q, 2));
 }
 
-$getShortlink = $con->prepare("select id, longlink from shortlink where shortlink = ? or id = ?;");
+$getShortlink = $con->prepare("select id, longlink, created_id from shortlink where shortlink = ? or id = ?;");
 $getShortlink->execute(array($q, $q));
 
 $group = null;
+$creator = null;
 
 if ($getShortlink->rowCount() > 0) {
     $sl = $getShortlink->fetch(PDO::FETCH_ASSOC);
@@ -26,6 +27,13 @@ if ($getShortlink->rowCount() > 0) {
         $group = array();
         while ($user = $getGroup->fetch(PDO::FETCH_ASSOC)) {
             array_push($group, $user);
+        }
+
+        $getCreator = $con->prepare("select * from twitch__user where identity_id = ?;");
+        $getCreator->execute(array($sl["created_id"]));
+
+        if ($getCreator->rowCount() > 0) {
+            $creator = $getCreator->fetch(PDO::FETCH_ASSOC);
         }
         
         require("group.php");

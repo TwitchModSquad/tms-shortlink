@@ -50,6 +50,7 @@ function processNumber($num) {
     <div class="wrapper">
         <header>
             <h1>TMS Group List</h1>
+            <small><?= 'Group short link created by <img src="'.$creator["profile_image_url"].'" class="small-avatar" /> ' . $creator["display_name"]; ?></small>
         </header>
         <main>
         <?php

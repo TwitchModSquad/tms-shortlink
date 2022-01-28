@@ -23,6 +23,12 @@ h1 {
     font-size: 1.6rem;
 }
 
+.small-avatar {
+    width: .9em;
+    height: .9em;
+    border-radius: .45em;
+}
+
 a {
     color: #9147ff;
 }
@@ -34,6 +40,7 @@ a.user-link {
 }
 
 .user {
+    position: relative;
     display: inline-block;
     background-color: #15151a;
     margin: 1em;
@@ -42,22 +49,22 @@ a.user-link {
 }
 
 .user img {
-    position: relative;
     width: 6em;
     height: 6em;
     border-radius: 3em;
     margin: 1em;
 }
 
-.user.live img::before {
+.user.live::before {
     position: absolute;
     content: '';
-    background-color: rgb(58, 145, 58);
-    width: .5em;
-    height: .5em;
-    border-radius: .25em;
-    top: 25%;
-    right: 25%;
+    background-color: rgb(69 172 69);
+    width: 1em;
+    height: 1em;
+    border-radius:1em;
+    border: .15em solid rgb(63 163 63);
+    top: 7em;
+    right: 2em;
     transform: translate(-50%, -50%);
     box-shadow: .2em .2em .5em rgba(0,0,0,0.3);
 }
