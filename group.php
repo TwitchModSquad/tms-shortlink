@@ -4,6 +4,18 @@ if (!isset($group)) {
     die("Missing group variable. group should not be called directly.");
 }
 
+function processNumber($num) {
+    if ($num === null) return "undef";
+
+    if ($num >= 1000000) {
+        return number_format($num / 1000000, 1) . "M";
+    } else if ($num >= 1000) {
+        return number_format($num / 1000, 1) . "K";
+    } else {
+        return number_format($num, 0);
+    }
+}
+
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,12 +51,17 @@ if (!isset($group)) {
         <h1>TMS Group List</h1>
         <?php
             foreach ($group as $user) {
-                echo '<div class="user">
+                echo '<div class="user'.($user["start_time"] !== null ? ' live' : '').'">
                     <img src="'.$user["profile_image_url"].'" alt="Profile picture for '.$user["display_name"].'" />
-                    <h2>'.$user["display_name"].'</h2>
+                    <h2>'.$user["display_name"].($user["affiliation"] === "partner" ? '&nbsp;<i class="fas fa-badge-check"></i>' : '').'</h2>
+                    <ul>
+                        <li><strong>Followers: '.processNumber($user["follower_count"]).'</strong></li>
+                        <li><strong>View Count: '.processNumber($user["view_count"]).'</strong></li>
+                    </ul>
                 </div>';
             }
         ?>
     </div>
+    <script src="https://kit.fontawesome.com/107bb78db8.js" crossorigin="anonymous"> </script>
 </body>
 </html>
