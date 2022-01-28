@@ -66,7 +66,7 @@ function processNumber($num) {
         ?>
         </main>
         <footer>
-            Copyright &copy; 2022 - <a href="https://twitchmodsquad.com/">TwitchModSquad</a>
+            Created by <a href="https://twitchmodsquad.com/">TwitchModSquad</a> • TwitchModSquad is not affiliated with Twitch Interactive Inc.
         </footer>
     </div>
     <script src="https://kit.fontawesome.com/107bb78db8.js" crossorigin="anonymous"> </script>
