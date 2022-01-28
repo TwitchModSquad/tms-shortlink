@@ -29,7 +29,7 @@ if ($getShortlink->rowCount() > 0) {
         }
     } else {
         header("Location: " . $sl["longlink"]);
-        die('<a href="'.$sl["longlink"].'">Header failed. Click here.</a>')
+        die('<a href="'.$sl["longlink"].'">Header failed. Click here.</a>');
     }
 } else {
     http_response_code(404);
