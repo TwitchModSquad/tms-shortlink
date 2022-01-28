@@ -24,6 +24,10 @@ h1 {
 }
 
 a {
+    color: #9147ff;
+}
+
+a.user-link {
     display: inline-block;
     text-decoration: none;
     color: #fff;
@@ -75,6 +79,6 @@ a {
 }
 
 footer {
-    font-size: .8rem;
+    font-size: .75rem;
     opacity: .7;
 }
