@@ -73,3 +73,8 @@ a {
     margin: 0;
     padding: 0;
 }
+
+footer {
+    font-size: .8rem;
+    opacity: .7;
+}

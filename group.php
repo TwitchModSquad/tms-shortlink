@@ -48,7 +48,10 @@ function processNumber($num) {
 </head>
 <body>
     <div class="wrapper">
-        <h1>TMS Group List</h1>
+        <header>
+            <h1>TMS Group List</h1>
+        </header>
+        <main>
         <?php
             foreach ($group as $user) {
                 echo '<a href="https://twitch.tv/'.strtolower($user["display_name"]).'" target="__blank"><div class="user'.($user["start_time"] !== null ? ' live' : '').'">
@@ -61,6 +64,10 @@ function processNumber($num) {
                 </div></a>';
             }
         ?>
+        </main>
+        <footer>
+            Copyright &copy; 2022 - <a href="https://twitchmodsquad.com/">TwitchModSquad</a>
+        </footer>
     </div>
     <script src="https://kit.fontawesome.com/107bb78db8.js" crossorigin="anonymous"> </script>
 </body>
