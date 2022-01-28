@@ -8,7 +8,7 @@ body {
 }
 
 .wrapper {
-    width: calc(100% - 2em);
+    width: 100%;
     max-width: 72em;
     margin: 2em auto;
 }
