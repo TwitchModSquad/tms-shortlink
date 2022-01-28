@@ -11,14 +11,16 @@ if (str_starts_with($q, "i/")) {
     header("Location: https://panel.twitchmodsquad.com/#/records/user//discord/" . substr($q, 2));
 }
 
-$getShortlink = $con->prepare("select id, longlink, created_id from shortlink where shortlink = ? or id = ?;");
+$getShortlink = $con->prepare("select id, name, longlink, created_id from shortlink where shortlink = ? or id = ?;");
 $getShortlink->execute(array($q, $q));
 
+$name = null;
 $group = null;
 $creator = null;
 
 if ($getShortlink->rowCount() > 0) {
     $sl = $getShortlink->fetch(PDO::FETCH_ASSOC);
+    $name = $sl["name"];
 
     if ($sl["longlink"] == null) {
         $getGroup = $con->prepare("select tu.*, live.start_time from shortlink__group as slg join twitch__user as tu on tu.id = slg.user_id left join live on live.identity_id = tu.identity_id and live.end_time is null where shortlink_id = ? order by tu.display_name asc;");

@@ -22,7 +22,7 @@ function processNumber($num) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Group List</title>
+    <title><?= $name; ?> • Group List</title>
 
     <!-- generated -->
     <link rel="apple-touch-icon" sizes="57x57" href="https://tms.to/icon/apple-icon-57x57.png">
@@ -49,7 +49,7 @@ function processNumber($num) {
 <body>
     <div class="wrapper">
         <header>
-            <h1>TMS Group List</h1>
+            <h1><?= $name; ?></h1>
             <small><?= 'Group short link created by <a href="https://twitch.tv/'.strtolower($creator["display_name"]).'" target="__blank"><img src="'.$creator["profile_image_url"].'" class="small-avatar" /> ' . $creator["display_name"]; ?></a></small>
         </header>
         <main>
