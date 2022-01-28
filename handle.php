@@ -33,5 +33,5 @@ if ($getShortlink->rowCount() > 0) {
     }
 } else {
     http_response_code(404);
-    die("404 No shortlink found :(")
+    die("404 No shortlink found :(");
 }
